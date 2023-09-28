@@ -17,9 +17,6 @@ I am a **PhD student** at University College Cork. I conduct research in the fie
 - **Intern** at [Milli Re](https://www.millire.com/ing/anasayfa.html)
 - **Software Engineer** at [BBVA Garanti Technology](https://www.garantibbvateknoloji.com.tr/)
 
-## Recognition
-
-
 ## Selected publications
 - **Vedat Dogan** and Steven Prestwich. 2023. Bilevel Optimization by Conditional Bayesian Optimization. In Machine Learning, Optimization, and Data Science: 8th International Conference, LOD 2023, Grasmere, Lake District, UK, September 22–26, 2023.
 
