@@ -1,7 +1,7 @@
 ---
 title: "A Batch Bayesian Approach for Bilevel Multi-Objective Decision Making Under Uncertainty"
 collection: publications
-permalink: /publication/2010-10-01-paper-title-number-2
+permalink: /publication/BamBiNo
 excerpt: '...About Paper...'
 date: 2023-02-13
 venue: 'AAAI23 Workshop on Uncertainty Reasoning and Quantification in Decision Making'
