@@ -1,5 +1,5 @@
 ---
-title: "Bilevel optimization by conditional Bayesian optimization"
+title: "Bilevel Optimization by Conditional Bayesian Optimization"
 collection: publications
 permalink: /publication/ConBaBo
 excerpt: '...About Paper...'
