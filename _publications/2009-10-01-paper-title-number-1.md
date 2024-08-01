@@ -6,7 +6,7 @@ excerpt: 'This paper is about the number 1. The number 2 is left for future work
 date: 2023-02-13
 venue: 'AAAI'23 Workshop on Uncertainty Reasoning and Quantification in Decision Making'
 paperurl: 'https://charliezhaoyinpeng.github.io/UDM-AAAI23/assets/papers/15/CameraReady/Dogan%20-%20A%20Batch%20Bayesian%20Approach%20for%20Bilevel%20Multi-objective%20Decision%20Making%20Under%20Uncertainty.pdf'
-citation: ''
+citation: 'asdasdasdasdasdasda'
 ---
 This paper is about the number 1. The number 2 is left for future work.
 
