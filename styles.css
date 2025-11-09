@@ -618,7 +618,7 @@ body {
 
 .collaborator-item {
     padding: 1.25rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     border-left: 3px solid var(--accent-color);
@@ -652,7 +652,7 @@ body {
 
 .opportunity-item {
     padding: 1rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     transition: var(--transition);
@@ -769,7 +769,7 @@ body {
 
 .resource-item {
     padding: 1.5rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     text-align: center;
@@ -838,7 +838,7 @@ body {
 
 .collaborator-item {
     padding: 1.25rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     border-left: 3px solid var(--accent-color);
@@ -872,7 +872,7 @@ body {
 
 .opportunity-item {
     padding: 1rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--border-color);
     border-radius: 6px;
     transition: var(--transition);
@@ -1223,7 +1223,7 @@ body {
 
 .filter-btn {
     padding: 0.625rem 1.25rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border: 2px solid var(--border-color);
     color: var(--text-secondary);
     border-radius: 6px;
@@ -1653,7 +1653,7 @@ body {
 
 .skill-tag {
     padding: 0.5rem 1rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     color: var(--text-color);
     border-radius: 6px;
     font-size: 0.8125rem;
@@ -1746,7 +1746,7 @@ body {
     padding: 0.625rem 1.25rem;
     border: 2px solid var(--border-color);
     border-radius: 6px;
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .social-link:hover,
@@ -1836,7 +1836,7 @@ body {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.98);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -2002,7 +2002,7 @@ body {
 }
 
 .blog-post-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
