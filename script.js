@@ -149,15 +149,17 @@ const statObserver = new IntersectionObserver((entries) => {
             entry.target.classList.add('counted', 'visible');
             const statItem = entry.target;
             const target = parseInt(statItem.getAttribute('data-target'));
-            const numberElement = statItem.querySelector('.stat-number');
-            animateCounter(numberElement, target);
+            const numberElement = statItem.querySelector('.stat-minimal-number');
+            if (numberElement) {
+                animateCounter(numberElement, target);
+            }
         }
     });
 }, {
-    threshold: 0.5
+    threshold: 0.3
 });
 
-document.querySelectorAll('.stat-item').forEach(stat => {
+document.querySelectorAll('.stat-minimal-item').forEach(stat => {
     statObserver.observe(stat);
 });
 

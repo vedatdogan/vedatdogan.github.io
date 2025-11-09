@@ -49,17 +49,12 @@ body {
     line-height: 1.5;
     color: var(--text-color);
     background-color: var(--bg-color);
-    background-image: 
-        radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.02) 0%, transparent 50%),
-        linear-gradient(135deg, transparent 0%, rgba(37, 99, 235, 0.01) 50%, transparent 100%);
-    background-size: 100% 100%, 100% 100%, 100% 100%;
-    background-attachment: fixed;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
     position: relative;
+    overflow-x: hidden;
 }
 
 body::before {
@@ -69,10 +64,37 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
+    background: var(--bg-color);
     background-image: 
-        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(37, 99, 235, 0.01) 2px, rgba(37, 99, 235, 0.01) 4px);
+        /* Neural network nodes */
+        radial-gradient(circle at 15% 25%, rgba(37, 99, 235, 0.08) 0%, transparent 2%),
+        radial-gradient(circle at 85% 35%, rgba(37, 99, 235, 0.06) 0%, transparent 2%),
+        radial-gradient(circle at 25% 65%, rgba(37, 99, 235, 0.07) 0%, transparent 2%),
+        radial-gradient(circle at 75% 75%, rgba(37, 99, 235, 0.05) 0%, transparent 2%),
+        radial-gradient(circle at 50% 15%, rgba(37, 99, 235, 0.06) 0%, transparent 2%),
+        radial-gradient(circle at 10% 85%, rgba(37, 99, 235, 0.05) 0%, transparent 2%),
+        radial-gradient(circle at 90% 15%, rgba(37, 99, 235, 0.04) 0%, transparent 2%),
+        radial-gradient(circle at 40% 90%, rgba(37, 99, 235, 0.06) 0%, transparent 2%),
+        /* Connection lines - horizontal */
+        linear-gradient(90deg, transparent 14%, rgba(37, 99, 235, 0.03) 15%, rgba(37, 99, 235, 0.03) 16%, transparent 17%),
+        linear-gradient(90deg, transparent 24%, rgba(37, 99, 235, 0.02) 25%, rgba(37, 99, 235, 0.02) 26%, transparent 27%),
+        linear-gradient(90deg, transparent 74%, rgba(37, 99, 235, 0.03) 75%, rgba(37, 99, 235, 0.03) 76%, transparent 77%),
+        linear-gradient(90deg, transparent 84%, rgba(37, 99, 235, 0.02) 85%, rgba(37, 99, 235, 0.02) 86%, transparent 87%),
+        /* Connection lines - vertical */
+        linear-gradient(0deg, transparent 14%, rgba(37, 99, 235, 0.03) 15%, rgba(37, 99, 235, 0.03) 16%, transparent 17%),
+        linear-gradient(0deg, transparent 24%, rgba(37, 99, 235, 0.02) 25%, rgba(37, 99, 235, 0.02) 26%, transparent 27%),
+        linear-gradient(0deg, transparent 64%, rgba(37, 99, 235, 0.03) 65%, rgba(37, 99, 235, 0.03) 66%, transparent 67%),
+        linear-gradient(0deg, transparent 74%, rgba(37, 99, 235, 0.02) 75%, rgba(37, 99, 235, 0.02) 76%, transparent 77%),
+        /* Diagonal connections */
+        linear-gradient(45deg, transparent 39%, rgba(37, 99, 235, 0.02) 40%, rgba(37, 99, 235, 0.02) 41%, transparent 42%),
+        linear-gradient(135deg, transparent 59%, rgba(37, 99, 235, 0.02) 60%, rgba(37, 99, 235, 0.02) 61%, transparent 62%),
+        linear-gradient(225deg, transparent 29%, rgba(37, 99, 235, 0.02) 30%, rgba(37, 99, 235, 0.02) 31%, transparent 32%),
+        linear-gradient(315deg, transparent 69%, rgba(37, 99, 235, 0.02) 70%, rgba(37, 99, 235, 0.02) 71%, transparent 72%);
+    background-size: 100% 100%;
+    background-attachment: fixed;
     pointer-events: none;
     z-index: 0;
+    opacity: 0.6;
 }
 
 body > * {
@@ -403,61 +425,57 @@ body > * {
     outline-offset: 2px;
 }
 
-/* Statistics Section */
-.statistics-section {
-    padding: 2rem 0;
-    background: linear-gradient(135deg, var(--bg-accent), white);
-    border-bottom: 1px solid var(--border-light);
-    margin-top: 56px;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+/* Minimal Statistics */
+.contact-social-stats {
+    display: flex;
+    align-items: flex-start;
     gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
 }
 
-.stat-item {
-    text-align: center;
-    padding: 1.5rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--border-color);
-    transition: var(--transition);
+.stats-minimal {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.stat-minimal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    border-left: 2px solid var(--accent-color);
+    background: var(--bg-accent);
+    border-radius: 4px;
+    min-width: 80px;
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
+    transition: var(--transition);
 }
 
-.stat-item.visible {
+.stat-minimal-item.visible {
     opacity: 1;
     transform: translateY(0);
-    animation: fadeInUp 0.6s ease forwards;
 }
 
-.stat-item:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--accent-color);
-}
-
-.stat-number {
+.stat-minimal-number {
     font-family: 'Crimson Text', serif;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: var(--accent-color);
-    margin-bottom: 0.5rem;
     line-height: 1;
 }
 
-.stat-label {
-    font-size: 0.9375rem;
+.stat-minimal-label {
+    font-size: 0.75rem;
     color: var(--text-secondary);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-align: center;
 }
 
 /* Sections */
@@ -1145,7 +1163,6 @@ body > * {
     flex-direction: row;
     gap: 1rem;
     flex-wrap: wrap;
-    margin-top: 1.5rem;
 }
 
 .social-link {
@@ -1341,13 +1358,27 @@ body > * {
         font-size: 1.5rem;
     }
     
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+    .contact-social-stats {
+        flex-direction: column;
+        gap: 1.5rem;
     }
     
-    .stat-number {
-        font-size: 2rem;
+    .stats-minimal {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .stat-minimal-item {
+        min-width: 70px;
+        padding: 0.5rem;
+    }
+    
+    .stat-minimal-number {
+        font-size: 1.25rem;
+    }
+    
+    .stat-minimal-label {
+        font-size: 0.6875rem;
     }
     
     .back-to-top {
