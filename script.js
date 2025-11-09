@@ -8,14 +8,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Get the section heading within the target section
             const sectionHeading = target.querySelector('.section-heading');
             
-            // Calculate the scroll position
+            // Calculate the scroll position to put the heading at the top
             let scrollPosition;
             if (sectionHeading) {
-                // Scroll to the heading, accounting for any padding
-                scrollPosition = sectionHeading.offsetTop - 20; // 20px padding from top
+                // Get the absolute position of the heading relative to the document
+                const headingRect = sectionHeading.getBoundingClientRect();
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                scrollPosition = headingRect.top + currentScroll;
             } else {
                 // If no heading, scroll to the section top
-                scrollPosition = target.offsetTop - 20;
+                const sectionRect = target.getBoundingClientRect();
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+                scrollPosition = sectionRect.top + currentScroll;
             }
             
             window.scrollTo({
