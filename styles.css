@@ -1026,12 +1026,14 @@ body {
 }
 
 .research-area-item h3,
+.research-area-item h4,
 .research-area-item p {
     position: relative;
     z-index: 1;
 }
 
-.research-area-item h3 {
+.research-area-item h3,
+.research-area-item h4 {
     font-size: 1.125rem;
     margin-bottom: 0.5rem;
     display: flex;
@@ -1041,7 +1043,8 @@ body {
     font-weight: 500;
 }
 
-.research-area-item h3 i {
+.research-area-item h3 i,
+.research-area-item h4 i {
     color: var(--accent-color);
     font-size: 1rem;
 }
@@ -1051,6 +1054,32 @@ body {
     color: var(--text-secondary);
     margin-bottom: 0;
     line-height: 1.5;
+}
+
+/* Research Section Subsections */
+.subsection-heading {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.subsection-heading:first-child {
+    margin-top: 0;
+}
+
+.research-domains-section,
+.application-areas-section,
+.research-interests-section {
+    margin-top: 2rem;
+}
+
+.research-domains-section {
+    margin-top: 0;
 }
 
 /* Research Projects Compact */
