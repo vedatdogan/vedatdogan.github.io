@@ -1372,6 +1372,23 @@ h4 b {
     transition: color 0.2s ease;
 }
 
+.pub-link-inline {
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin-left: 0.5rem;
+}
+
+.pub-link-inline a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.pub-link-inline a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
 .publication-item:hover h3 {
     color: var(--accent-color);
 }
