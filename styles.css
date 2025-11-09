@@ -64,9 +64,10 @@ body {
 
 
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0 3rem;
+    width: calc(100% - 240px);
 }
 
 /* Navigation - Left Sidebar */
@@ -211,6 +212,7 @@ body {
     grid-template-columns: 160px 1fr;
     gap: 2.5rem;
     align-items: start;
+    max-width: 100%;
 }
 
 .hero-image {
