@@ -1998,6 +1998,11 @@ h4 b {
         padding: 0.375rem 0.5rem;
     }
     
+    .application-areas-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
     .stat-minimal-number {
         font-size: 1.125rem;
     }
