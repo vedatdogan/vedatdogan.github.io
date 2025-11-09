@@ -2044,6 +2044,10 @@ body {
         gap: 2rem;
     }
     
+    .opportunities-list {
+        grid-template-columns: 1fr;
+    }
+    
     .service-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
