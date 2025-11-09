@@ -2,17 +2,24 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
         if (target) {
-            const navbar = document.getElementById('navbar');
-            const navbarHeight = navbar ? navbar.offsetHeight : 70;
             // Get the section heading within the target section
             const sectionHeading = target.querySelector('.section-heading');
-            const headingOffset = sectionHeading ? sectionHeading.offsetTop : 0;
-            // Calculate scroll position: section top + heading position - navbar height
-            const offsetTop = target.offsetTop + headingOffset - navbarHeight;
+            
+            // Calculate the scroll position
+            let scrollPosition;
+            if (sectionHeading) {
+                // Scroll to the heading, accounting for any padding
+                scrollPosition = sectionHeading.offsetTop - 20; // 20px padding from top
+            } else {
+                // If no heading, scroll to the section top
+                scrollPosition = target.offsetTop - 20;
+            }
+            
             window.scrollTo({
-                top: Math.max(0, offsetTop),
+                top: Math.max(0, scrollPosition),
                 behavior: 'smooth'
             });
         }
