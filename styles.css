@@ -1118,6 +1118,70 @@ body {
     font-size: 0.9375rem;
     color: var(--text-secondary);
     line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+/* Project Applications Tags */
+.project-applications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.app-tag {
+    display: inline-block;
+    padding: 0.375rem 0.875rem;
+    background: var(--bg-accent);
+    color: var(--accent-color);
+    border-radius: 4px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+/* Application Areas Grid */
+.application-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.application-area-card {
+    padding: 1.5rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    text-align: center;
+    transition: var(--transition);
+    border-top: 3px solid var(--accent-color);
+}
+
+.application-area-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow);
+    transform: translateY(-4px);
+}
+
+.application-area-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.application-area-card h4 {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    margin-bottom: 0.625rem;
+    color: var(--text-color);
+}
+
+.application-area-card p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
 }
 
 /* Publications */
