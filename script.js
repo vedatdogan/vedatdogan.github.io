@@ -149,6 +149,40 @@ function animateCounter(element, target, duration = 2000) {
     updateCounter();
 }
 
+// Animated metrics counter (for impact section)
+function animateMetricCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    
+    const updateCounter = () => {
+        start += increment;
+        if (start < target) {
+            element.textContent = Math.floor(start);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+    
+    updateCounter();
+}
+
+const metricObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+            entry.target.classList.add('counted');
+            const target = parseInt(entry.target.getAttribute('data-target'));
+            animateMetricCounter(entry.target, target);
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+document.querySelectorAll('.metric-number').forEach(metric => {
+    metricObserver.observe(metric);
+});
+
 const statObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
