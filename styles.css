@@ -301,12 +301,11 @@ body {
 
 .hero-actions {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 1.5rem;
-    flex-wrap: wrap;
 }
 
-.hero-social-stats-wrapper {
+.hero-actions-row {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -409,6 +408,7 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     align-items: center;
+    margin-top: 0;
 }
 
 .stat-minimal-item {
