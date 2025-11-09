@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vedat Dogan's Blog - Articles on AI, Machine Learning, Optimization, and Research">
+    <meta name="keywords" content="Vedat Dogan, Blog, AI, Machine Learning, Optimization, Research Articles">
+    <meta name="author" content="Vedat Dogan">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vedatdogan.github.io/blog.html">
+    <meta property="og:title" content="Vedat Dogan | Blog">
+    <meta property="og:description" content="Articles on AI, Machine Learning, Optimization, and Research">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://vedatdogan.github.io/blog.html">
+    <meta property="twitter:title" content="Vedat Dogan | Blog">
+    <meta property="twitter:description" content="Articles on AI, Machine Learning, Optimization, and Research">
+    
+    <title>Blog | Vedat Dogan</title>
+    <link rel="canonical" href="https://vedatdogan.github.io/blog.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to main content link (accessibility) -->
+    <a href="#blog-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;">Vedat Dogan</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#publications">Publications</a></li>
+                <li><a href="index.html#presentations">Presentations</a></li>
+                <li><a href="index.html#cv">CV</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <h1 class="blog-title">Blog</h1>
+            <p class="blog-subtitle">Articles on AI, Machine Learning, Optimization, and Research</p>
+            <div class="blog-medium-link">
+                <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fab fa-medium"></i> View on Medium
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section id="blog-content" class="section">
+        <div class="container">
+            <div class="blog-container">
+                <!-- Medium RSS Feed Integration -->
+                <div id="medium-posts" class="blog-posts">
+                    <div class="blog-loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Loading blog posts from Medium...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Vedat Dogan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // Medium RSS Feed Integration
+        const MEDIUM_RSS_URL = 'https://medium.com/feed/@vedatdogan';
+        const CORS_PROXY = 'https://api.rss2json.com/v1/api.json?rss_url=';
+        
+        async function loadMediumPosts() {
+            const blogPostsContainer = document.getElementById('medium-posts');
+            
+            try {
+                const response = await fetch(`${CORS_PROXY}${encodeURIComponent(MEDIUM_RSS_URL)}`);
+                const data = await response.json();
+                
+                if (data.status === 'ok' && data.items && data.items.length > 0) {
+                    blogPostsContainer.innerHTML = '';
+                    
+                    data.items.slice(0, 10).forEach((post, index) => {
+                        const postCard = document.createElement('div');
+                        postCard.className = 'blog-post-card';
+                        postCard.style.opacity = '0';
+                        postCard.style.transform = 'translateY(20px)';
+                        
+                        // Extract image from content
+                        const imgMatch = post.content.match(/<img[^>]+src="([^"]+)"/);
+                        const imageUrl = imgMatch ? imgMatch[1] : '';
+                        
+                        // Format date
+                        const postDate = new Date(post.pubDate);
+                        const formattedDate = postDate.toLocaleDateString('en-US', { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                        });
+                        
+                        postCard.innerHTML = `
+                            ${imageUrl ? `<div class="blog-post-image">
+                                <img src="${imageUrl}" alt="${post.title}" loading="lazy">
+                            </div>` : ''}
+                            <div class="blog-post-content">
+                                <div class="blog-post-meta">
+                                    <span class="blog-post-date">
+                                        <i class="far fa-calendar"></i> ${formattedDate}
+                                    </span>
+                                    <span class="blog-post-read-time">
+                                        <i class="far fa-clock"></i> ${Math.ceil(post.content.split(' ').length / 200)} min read
+                                    </span>
+                                </div>
+                                <h2 class="blog-post-title">
+                                    <a href="${post.link}" target="_blank" rel="noopener noreferrer">${post.title}</a>
+                                </h2>
+                                <div class="blog-post-excerpt">${post.content.substring(0, 200)}...</div>
+                                <div class="blog-post-categories">
+                                    ${post.categories ? post.categories.slice(0, 3).map(cat => 
+                                        `<span class="blog-category-tag">${cat}</span>`
+                                    ).join('') : ''}
+                                </div>
+                                <a href="${post.link}" target="_blank" rel="noopener noreferrer" class="blog-post-link">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        `;
+                        
+                        blogPostsContainer.appendChild(postCard);
+                        
+                        // Animate in
+                        setTimeout(() => {
+                            postCard.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                            postCard.style.opacity = '1';
+                            postCard.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                } else {
+                    blogPostsContainer.innerHTML = `
+                        <div class="blog-empty">
+                            <i class="fas fa-newspaper"></i>
+                            <p>No blog posts found. Check out my articles on <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer">Medium</a>.</p>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error loading Medium posts:', error);
+                blogPostsContainer.innerHTML = `
+                    <div class="blog-error">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Unable to load blog posts at the moment. Please visit my <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer">Medium profile</a> directly.</p>
+                    </div>
+                `;
+            }
+        }
+        
+        // Load posts on page load
+        if (document.getElementById('medium-posts')) {
+            loadMediumPosts();
+        }
+        
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
+
