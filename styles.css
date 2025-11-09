@@ -115,13 +115,7 @@ h4 b {
 }
 
 .nav-brand {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--text-color);
-    letter-spacing: 0.02em;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--border-color);
+    display: none;
 }
 
 .nav-menu {
