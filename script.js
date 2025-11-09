@@ -6,7 +6,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (target) {
             const navbar = document.getElementById('navbar');
             const navbarHeight = navbar ? navbar.offsetHeight : 70;
-            const offsetTop = target.offsetTop - navbarHeight;
+            // Get the section heading within the target section
+            const sectionHeading = target.querySelector('.section-heading');
+            const headingOffset = sectionHeading ? sectionHeading.offsetTop : 0;
+            // Calculate scroll position: section top + heading position - navbar height
+            const offsetTop = target.offsetTop + headingOffset - navbarHeight;
             window.scrollTo({
                 top: Math.max(0, offsetTop),
                 behavior: 'smooth'
