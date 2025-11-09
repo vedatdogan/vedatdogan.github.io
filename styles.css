@@ -46,7 +46,7 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.7;
+    line-height: 1.5;
     color: var(--text-color);
     background-color: var(--bg-color);
     font-size: 16px;
@@ -155,7 +155,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 6rem 0 4rem;
+    padding: 5rem 0 3rem;
     margin-top: 56px;
     background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-accent) 50%, var(--bg-alt) 100%);
     position: relative;
@@ -255,16 +255,16 @@ body {
 .hero-tagline {
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
     color: var(--text-color);
 }
 
 .hero-description {
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
     color: var(--text-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .hero-meta {
@@ -380,7 +380,7 @@ body {
 
 /* Sections */
 .section {
-    padding: 4rem 0;
+    padding: 3rem 0;
     position: relative;
 }
 
@@ -403,11 +403,11 @@ body {
     font-family: 'Crimson Text', serif;
     font-size: 2.25rem;
     font-weight: 400;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     color: var(--text-color);
     letter-spacing: 0.01em;
     position: relative;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
     display: inline-block;
 }
 
@@ -432,9 +432,9 @@ body {
 
 .content-main .lead {
     font-size: 1.125rem;
-    line-height: 1.7;
+    line-height: 1.5;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 400;
 }
 
@@ -442,12 +442,12 @@ body {
 .research-areas-list {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    margin: 2rem 0;
+    gap: 1rem;
+    margin: 1.5rem 0;
 }
 
 .research-area-item {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 1.25rem;
     background: white;
     border: 1px solid var(--border-color);
     border-radius: 6px;
@@ -504,25 +504,25 @@ body {
     font-size: 0.9375rem;
     color: var(--text-secondary);
     margin-bottom: 0;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Research Projects Compact */
 .research-projects-compact {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 .research-projects-compact h3 {
     font-family: 'Crimson Text', serif;
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: var(--text-color);
 }
 
 .project-item-compact {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -534,7 +534,7 @@ body {
 
 .project-item-compact h4 {
     font-size: 1.125rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.375rem;
     color: var(--text-color);
     font-weight: 500;
 }
@@ -542,7 +542,7 @@ body {
 .project-item-compact p {
     font-size: 0.9375rem;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Publications */
@@ -622,8 +622,8 @@ body {
 .publication-item {
     display: grid;
     grid-template-columns: 80px 1fr;
-    gap: 1.5rem;
-    padding: 1.25rem 1rem;
+    gap: 1.25rem;
+    padding: 1rem 0.875rem;
     border-bottom: 1px solid var(--border-light);
     border-left: 3px solid transparent;
     transition: var(--transition);
@@ -684,8 +684,8 @@ body {
     font-family: 'Crimson Text', serif;
     font-size: 1.125rem;
     font-weight: 400;
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+    margin-bottom: 0.375rem;
+    line-height: 1.4;
     color: var(--text-color);
     transition: color 0.2s ease;
 }
@@ -698,21 +698,21 @@ body {
     font-size: 0.875rem;
     color: var(--accent-color);
     font-weight: 500;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.125rem;
     font-style: italic;
 }
 
 .pub-authors {
     font-size: 0.875rem;
     color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.375rem;
 }
 
 .pub-links {
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 }
 
 .pub-link {
@@ -756,8 +756,8 @@ body {
 .presentation-item {
     display: grid;
     grid-template-columns: 80px 1fr;
-    gap: 1.5rem;
-    padding: 1.25rem 1rem;
+    gap: 1.25rem;
+    padding: 1rem 0.875rem;
     border-bottom: 1px solid var(--border-light);
     border-left: 3px solid transparent;
     transition: var(--transition);
@@ -799,8 +799,8 @@ body {
     font-family: 'Crimson Text', serif;
     font-size: 1.125rem;
     font-weight: 400;
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+    margin-bottom: 0.375rem;
+    line-height: 1.4;
     color: var(--text-color);
     transition: color 0.2s ease;
 }
@@ -820,7 +820,7 @@ body {
 .pres-location {
     font-size: 0.875rem;
     color: var(--text-light);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -828,7 +828,7 @@ body {
 }
 
 .pres-links {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 }
 
 .pres-link {
@@ -870,7 +870,7 @@ body {
 .cv-sections {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
     max-width: 100%;
 }
 
@@ -878,15 +878,15 @@ body {
     font-family: 'Crimson Text', serif;
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: var(--text-color);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.5rem;
 }
 
 .cv-item-compact {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -928,9 +928,9 @@ body {
 
 .cv-detail {
     font-size: 0.875rem;
-    line-height: 1.6;
+    line-height: 1.5;
     color: var(--text-secondary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.375rem;
 }
 
 .cv-duties-compact {
@@ -941,9 +941,9 @@ body {
 
 .cv-duties-compact li {
     font-size: 0.875rem;
-    line-height: 1.6;
+    line-height: 1.5;
     color: var(--text-secondary);
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.25rem;
     padding-left: 1.25rem;
     position: relative;
 }
@@ -959,12 +959,12 @@ body {
 .skills-compact {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 .skill-group h4 {
     font-size: 0.9375rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.625rem;
     color: var(--text-color);
     font-weight: 500;
 }
@@ -1009,7 +1009,7 @@ body {
 
 .contact-content p {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
     color: var(--text-secondary);
 }
 
