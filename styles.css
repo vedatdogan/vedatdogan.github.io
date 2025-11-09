@@ -2014,7 +2014,7 @@ h4 b {
 /* Blog Page Styles */
 .blog-header {
     padding: 6rem 0 3rem;
-    margin-top: 56px;
+    margin-top: 0;
     background: linear-gradient(135deg, var(--bg-color) 0%, var(--bg-accent) 50%, var(--bg-alt) 100%);
     text-align: center;
 }
