@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,13 +17,10 @@
             <div class="nav-brand">Vedat Dogan</div>
             <ul class="nav-menu">
                 <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#research">Research</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
                 <li><a href="#presentations">Presentations</a></li>
+                <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -38,59 +34,22 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="container">
-            <div class="hero-wrapper">
-                <div class="hero-image">
-                    <div class="hero-image-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
-                </div>
-                <div class="hero-content">
-                    <h1 class="hero-title" style="font-family: 'Playfair Display', serif;">Vedat Dogan</h1>
-                    <p class="hero-subtitle">Postdoctoral Researcher in AI, Machine Learning & Optimization</p>
-                    <p class="hero-location">Insight SFI Research Centre for Data Analytics, University College Cork, Cork, Ireland</p>
-                    <div class="hero-actions">
-                        <a href="Resume-CV-VD copy.pdf" download class="btn btn-primary">
-                            <i class="fas fa-download"></i> Download CV
-                        </a>
-                        <div class="hero-social">
-                            <a href="https://github.com/vedatdogan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/vedatdogan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="https://scholar.google.com/citations?user=58SPkuwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-                                <i class="fas fa-graduation-cap"></i>
-                            </a>
-                            <a href="https://twitter.com/vedat__dogan" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item" data-target="6">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Publications</div>
-                </div>
-                <div class="stat-item" data-target="5">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Conference Talks</div>
-                </div>
-                <div class="stat-item" data-target="10">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-item" data-target="3">
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Research Areas</div>
+            <h1 class="hero-name">Vedat Dogan</h1>
+            <p class="hero-title">Postdoctoral Researcher <span class="separator">•</span> AI & Optimization Specialist</p>
+            <p class="hero-tagline">I develop AI-supported decision-making systems using game-theoretic optimization models and advanced machine learning techniques.</p>
+            <p class="hero-description">Relying on Bayesian optimization, bilevel optimization, and multi-objective decision-making approaches, I create algorithms that help solve complex hierarchical optimization problems in real-world applications including diplomacy, military strategy, and supply chain management.</p>
+            <div class="hero-divider"></div>
+            <div class="hero-location">Insight SFI Research Centre for Data Analytics, University College Cork</div>
+            <div class="hero-actions">
+                <a href="Resume-CV-VD copy.pdf" download class="btn-download">Download CV</a>
+                <div class="hero-social">
+                    <a href="https://github.com/vedatdogan" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <span class="separator">•</span>
+                    <a href="https://www.linkedin.com/in/vedatdogan/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <span class="separator">•</span>
+                    <a href="https://scholar.google.com/citations?user=58SPkuwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                    <span class="separator">•</span>
+                    <a href="https://twitter.com/vedat__dogan" target="_blank" rel="noopener noreferrer">Twitter</a>
                 </div>
             </div>
         </div>
@@ -99,14 +58,14 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
+            <h2 class="section-heading">About</h2>
+            <div class="content">
                 <p>I am a Postdoctoral Researcher at the Insight SFI Research Centre for Data Analytics, University College Cork, specializing in Artificial Intelligence, Machine Learning, and Optimization. I hold a PhD in Computer Science from University College Cork (2023) with a thesis on "Bayesian Bilevel Optimization" and a Bachelor of Engineering in Mathematical Engineering from Yildiz Technical University, where I graduated with Honors (Top 10 of class).</p>
                 
                 <p>My research focuses on developing AI-supported decision-making systems using game-theoretic optimization models. I work on solving hierarchical multi-level optimization problems with advanced machine learning techniques, including Bayesian optimization, bilevel optimization, and multi-objective decision-making under uncertainty. Currently, I am extending my work to network representation data and exploring graph neural network (GNN) algorithms for complex optimization challenges.</p>
 
                 <h3>Research Interests</h3>
-                <ul class="research-interests">
+                <ul class="research-list">
                     <li><strong>Artificial Intelligence:</strong> Diplomacy, military applications, supply chain management, environmental economics, and game-theoretic decision-making systems</li>
                     <li><strong>Machine Learning:</strong> Automated machine learning, multi-task learning, meta-learning, and various supervised/unsupervised learning approaches</li>
                     <li><strong>Optimization:</strong> Bi-level, Bayesian, black-box, multi-objective, hyperparameter, and global optimization methods</li>
@@ -115,209 +74,22 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section section-alt">
+    <!-- Research Section -->
+    <section id="research" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">March 2024 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Postdoctoral Researcher (Full-time)</h3>
-                        <h4>Insight SFI Research Centre for Data Analytics / University College Cork, Cork, Ireland</h4>
-                        <ul>
-                            <li>Working on AI-supported decision-making systems on game-theoretic optimization models</li>
-                            <li>Developing algorithms to solve hierarchical multi-level optimization problems with advanced machine learning techniques</li>
-                            <li>Extending existing work to network representation data and working with graph neural network (GNN) algorithms</li>
-                        </ul>
-                    </div>
+            <h2 class="section-heading">Research</h2>
+            <div class="content">
+                <div class="research-item">
+                    <h3>Bayesian Bilevel Optimization</h3>
+                    <p>Developing efficient algorithms for hierarchical optimization problems using Bayesian methods and Gaussian processes. This work addresses the challenge of optimizing systems where upper-level decisions must account for lower-level optimization responses.</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Oct 2023 - March 2024</div>
-                    <div class="timeline-content">
-                        <h3>Research Assistant (Full-time)</h3>
-                        <h4>Insight SFI Research Centre for Data Analytics / University College Cork, Cork, Ireland</h4>
-                        <ul>
-                            <li>Worked on network data analysis and developing a game-theoretic approach to network reshaping problem</li>
-                            <li>Identified the most influential node in a network and link prediction between unconnected networks with supervised learning approach</li>
-                        </ul>
-                    </div>
+                <div class="research-item">
+                    <h3>Graph Neural Networks for Network Analysis</h3>
+                    <p>Applying GNN algorithms to network representation data for optimization and decision-making tasks. Exploring how graph structures can be leveraged for complex optimization challenges in network data.</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">July 2018 - Oct 2019</div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer (Full-time)</h3>
-                        <h4>Garanti Technology / BBVA Group, Istanbul, Turkey</h4>
-                        <ul>
-                            <li>Worked on IBM mainframe for the Treasury Department of Garanti Bank / BBVA Group</li>
-                            <li>Developed software using STEP (JAVA), and db2 (IBM) databases using IBM tools including COBOL, CoolGen and Oracle databases</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">March 2018 - July 2018</div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer Consultant (Full-time)</h3>
-                        <h4>Kafein Software Solutions, Istanbul, Turkey</h4>
-                        <ul>
-                            <li>Used Tibco tools to find solutions to defects on Vodafone</li>
-                            <li>Worked with flows to find the right point of defects and micro-services such as Kubernetes</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-date">Oct 2019 - Oct 2023</div>
-                    <h3>Doctor of Philosophy - Computer Science</h3>
-                    <h4>University College Cork, Cork, Ireland</h4>
-                    <p><strong>Thesis:</strong> Bayesian Bilevel Optimization</p>
-                    <p>Fully-funded (Science Foundation Ireland - SFI) researcher in Confirm Smart Manufacturing Centre. Research focus on Artificial Intelligence and Machine Learning algorithms, game-theoretic decision-making models, bilevel optimization and Bayesian approach.</p>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-date">Sep 2015 - Jun 2016</div>
-                    <h3>Higher Certificate of Engineering - Electronics and Computer Engineering</h3>
-                    <h4>Athlone Institute of Technology, Athlone, Ireland</h4>
-                    <p><strong>GPA:</strong> 82.66/100</p>
-                    <p>Erasmus exchange student. Final project: Home alarm system using Arduino and Processing3.</p>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-date">Sep 2013 - Aug 2018</div>
-                    <h3>Bachelor of Engineering - Mathematical Engineering</h3>
-                    <h4>Yildiz Technical University, Istanbul, Turkey</h4>
-                    <p><strong>GPA:</strong> 3.04/4.00</p>
-                    <p>Graduated with Honour (Top 10 of class). Focus on software development and mathematical algorithmic development. Final year project: Machine learning project on sensor data for human activity recognition using Random Forest algorithm.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Python</span>
-                            <span class="skill-percent">95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Java</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>SQL</span>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3><i class="fas fa-brain"></i> Machine Learning Frameworks</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>PyTorch</span>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Scikit-learn</span>
-                            <span class="skill-percent">95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>BoTorch / GPy</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Graph Neural Networks</span>
-                            <span class="skill-percent">80%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skills-category">
-                    <h3><i class="fas fa-chart-line"></i> Research Domains</h3>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Bayesian Optimization</span>
-                            <span class="skill-percent">95%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="95"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Bilevel Optimization</span>
-                            <span class="skill-percent">90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="90"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Multi-Objective Optimization</span>
-                            <span class="skill-percent">88%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="88"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Game Theory</span>
-                            <span class="skill-percent">85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="85"></div>
-                        </div>
-                    </div>
+                <div class="research-item">
+                    <h3>Game-Theoretic Decision Making</h3>
+                    <p>AI-supported decision-making systems for diplomacy, military applications, and strategic optimization. Creating algorithms that solve multi-level optimization problems in strategic contexts.</p>
                 </div>
             </div>
         </div>
@@ -326,210 +98,61 @@
     <!-- Publications Section -->
     <section id="publications" class="section">
         <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="publications-list">
-                <div class="publication-item featured">
-                    <div class="publication-badge">Featured</div>
+            <h2 class="section-heading">Publications</h2>
+            <div class="content">
+                <div class="publication-item">
                     <h3>Multi-Objective BiLevel Optimization by Bayesian Optimization</h3>
-                    <p class="publication-venue"><i class="fas fa-book"></i> Algorithms 2024, 17, 146</p>
-                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
-                    <div class="publication-actions">
-                        <a href="https://www.mdpi.com/1999-4893/17/4/146" target="_blank" rel="noopener noreferrer" class="publication-link">
-                            <i class="fas fa-external-link-alt"></i> View Paper
-                        </a>
-                        <a href="https://www.mdpi.com/1999-4893/17/4/146" target="_blank" rel="noopener noreferrer" class="publication-link">
-                            <i class="fas fa-file-pdf"></i> PDF
-                        </a>
-                    </div>
+                    <p class="publication-meta">Algorithms 2024, 17, 146</p>
+                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
+                    <p class="publication-links">
+                        <a href="https://www.mdpi.com/1999-4893/17/4/146" target="_blank" rel="noopener noreferrer">View Paper</a>
+                    </p>
                 </div>
 
                 <div class="publication-item">
                     <h3>BHO-MA: Bayesian Hyperparameter Optimization with Multi-objective Acquisition</h3>
-                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> OL2A 2023</p>
-                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
-                    <div class="publication-actions">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-53025-8_27" target="_blank" rel="noopener noreferrer" class="publication-link">
-                            <i class="fas fa-external-link-alt"></i> View Paper
-                        </a>
-                    </div>
+                    <p class="publication-meta">International Conference on Optimization, Learning Algorithms and Applications (OL2A 2023)</p>
+                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
+                    <p class="publication-links">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-53025-8_27" target="_blank" rel="noopener noreferrer">View Paper</a>
+                    </p>
                 </div>
 
                 <div class="publication-item">
                     <h3>Bilevel Optimization by Conditional Bayesian Optimization</h3>
-                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> LOD2023</p>
-                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
-                    <div class="publication-actions">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-53969-5_19" target="_blank" rel="noopener noreferrer" class="publication-link">
-                            <i class="fas fa-external-link-alt"></i> View Paper
-                        </a>
-                    </div>
+                    <p class="publication-meta">International Conference on Machine Learning, Optimization, and Data Science (LOD2023)</p>
+                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
+                    <p class="publication-links">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-53969-5_19" target="_blank" rel="noopener noreferrer">View Paper</a>
+                    </p>
                 </div>
 
                 <div class="publication-item">
                     <h3>A Batch Bayesian Approach for Bilevel Multi-Objective Decision Making Under Uncertainty</h3>
-                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> AAAI'23 Workshop</p>
-                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
-                    <div class="publication-actions">
-                        <a href="https://charliezhaoyinpeng.github.io/UDM-AAAI23/assets/papers/15/CameraReady/Dogan%20-%20A%20Batch%20Bayesian%20Approach%20for%20Bilevel%20Multi-objective%20Decision%20Making%20Under%20Uncertainty.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
-                            <i class="fas fa-external-link-alt"></i> View Paper
-                        </a>
-                    </div>
+                    <p class="publication-meta">AAAI'23 Workshop on Uncertainty Reasoning and Quantification in Decision Making</p>
+                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
+                    <p class="publication-links">
+                        <a href="https://charliezhaoyinpeng.github.io/UDM-AAAI23/assets/papers/15/CameraReady/Dogan%20-%20A%20Batch%20Bayesian%20Approach%20for%20Bilevel%20Multi-objective%20Decision%20Making%20Under%20Uncertainty.pdf" target="_blank" rel="noopener noreferrer">View Paper</a>
+                    </p>
                 </div>
 
                 <div class="publication-item">
                     <h3>Multi-objective Bilevel Decision Making with Noisy Objectives: A Batch Bayesian Approach</h3>
-                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> ECAI'23, MODeM Workshop</p>
-                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
-                    <div class="publication-actions">
-                        <a href="https://modem2023.vub.ac.be/papers/MODeM2023_paper_2.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
-                            <i class="fas fa-external-link-alt"></i> View Paper
-                        </a>
-                    </div>
+                    <p class="publication-meta">ECAI'23, Multi-objective Decision Making (MODeM'23) Workshop</p>
+                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
+                    <p class="publication-links">
+                        <a href="https://modem2023.vub.ac.be/papers/MODeM2023_paper_2.pdf" target="_blank" rel="noopener noreferrer">View Paper</a>
+                    </p>
                 </div>
 
                 <div class="publication-item">
                     <h3>Bayesian Optimization with Multi-objective Acquisition Function for Bilevel Problems</h3>
-                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> AICS 2022</p>
-                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
-                    <div class="publication-actions">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-26438-2_32" target="_blank" rel="noopener noreferrer" class="publication-link">
-                            <i class="fas fa-external-link-alt"></i> View Paper
-                        </a>
-                    </div>
+                    <p class="publication-meta">Artificial Intelligence and Cognitive Science (AICS 2022)</p>
+                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
+                    <p class="publication-links">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-26438-2_32" target="_blank" rel="noopener noreferrer">View Paper</a>
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Research Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Bayesian Bilevel Optimization</h3>
-                    <p>Developing efficient algorithms for hierarchical optimization problems using Bayesian methods and Gaussian processes.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">6</span>
-                            <span class="metric-label">Publications</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">High</span>
-                            <span class="metric-label">Impact</span>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Bayesian Optimization</span>
-                        <span class="tag">Bilevel</span>
-                        <span class="tag">Python</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>Graph Neural Networks for Network Analysis</h3>
-                    <p>Applying GNN algorithms to network representation data for optimization and decision-making tasks.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">Ongoing</span>
-                            <span class="metric-label">Status</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">GNN</span>
-                            <span class="metric-label">Focus</span>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">GNN</span>
-                        <span class="tag">Network Analysis</span>
-                        <span class="tag">PyTorch</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-chess"></i>
-                    </div>
-                    <h3>Game-Theoretic Decision Making</h3>
-                    <p>AI-supported decision-making systems for diplomacy, military applications, and strategic optimization.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">Active</span>
-                            <span class="metric-label">Research</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">Multi-Level</span>
-                            <span class="metric-label">Optimization</span>
-                        </div>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Game Theory</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Decision Making</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog" class="section">
-        <div class="container">
-            <h2 class="section-title">Latest Blog Posts</h2>
-            <p class="section-subtitle">Read my articles on Medium</p>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-date"><i class="far fa-calendar"></i> Coming Soon</div>
-                        <h3>Understanding Bayesian Optimization</h3>
-                        <p>An in-depth exploration of Bayesian optimization techniques and their applications in machine learning.</p>
-                        <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="blog-link">
-                            Read on Medium <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-date"><i class="far fa-calendar"></i> Coming Soon</div>
-                        <h3>Bilevel Optimization in Practice</h3>
-                        <p>Practical insights into solving bilevel optimization problems with real-world examples.</p>
-                        <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="blog-link">
-                            Read on Medium <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-date"><i class="far fa-calendar"></i> Coming Soon</div>
-                        <h3>Graph Neural Networks for Optimization</h3>
-                        <p>Exploring how GNNs can be applied to complex optimization challenges in network data.</p>
-                        <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="blog-link">
-                            Read on Medium <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-cta">
-                <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    <i class="fab fa-medium"></i> View All Posts on Medium
-                </a>
             </div>
         </div>
     </section>
@@ -537,107 +160,108 @@
     <!-- Presentations Section -->
     <section id="presentations" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Lectures & Presentations</h2>
-            <div class="presentations-grid">
-                <div class="presentation-card">
-                    <div class="presentation-header">
-                        <div class="presentation-icon">
-                            <i class="fas fa-microphone"></i>
-                        </div>
-                        <div class="presentation-type">Conference Talk</div>
-                    </div>
+            <h2 class="section-heading">Presentations</h2>
+            <div class="content">
+                <div class="presentation-item">
                     <h3>A Batch Bayesian Approach for Bilevel Multi-Objective Decision Making</h3>
-                    <p class="presentation-venue">AAAI'23 Workshop on Uncertainty Reasoning</p>
-                    <p class="presentation-location"><i class="fas fa-map-marker-alt"></i> Washington, USA</p>
-                    <p class="presentation-date"><i class="far fa-calendar"></i> February 2023</p>
-                    <div class="presentation-actions">
-                        <a href="https://drive.google.com/file/d/18s2JfBl1DTDg5Ba0VPVIUcNntNJ0-Qnc/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="presentation-link">
-                            <i class="fas fa-file-powerpoint"></i> Slides
-                        </a>
-                    </div>
+                    <p class="presentation-meta">AAAI'23 Workshop on Uncertainty Reasoning and Quantification in Decision Making</p>
+                    <p class="presentation-location">Washington, USA • February 2023</p>
+                    <p class="presentation-links">
+                        <a href="https://drive.google.com/file/d/18s2JfBl1DTDg5Ba0VPVIUcNntNJ0-Qnc/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Slides</a>
+                    </p>
                 </div>
 
-                <div class="presentation-card">
-                    <div class="presentation-header">
-                        <div class="presentation-icon">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <div class="presentation-type">Conference Talk</div>
-                    </div>
-                    <h3>BHO-MA: Bayesian Hyperparameter Optimization</h3>
-                    <p class="presentation-venue">OL2A 2023</p>
-                    <p class="presentation-location"><i class="fas fa-map-marker-alt"></i> Ponta Delgada, Portugal</p>
-                    <p class="presentation-date"><i class="far fa-calendar"></i> September 2023</p>
-                    <div class="presentation-actions">
-                        <a href="https://drive.google.com/file/d/1KTr2pS3kz8wZSa4Ks4TaaTcly_DvYu67/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="presentation-link">
-                            <i class="fas fa-file-powerpoint"></i> Slides
-                        </a>
-                    </div>
+                <div class="presentation-item">
+                    <h3>BHO-MA: Bayesian Hyperparameter Optimization with Multi-objective Acquisition</h3>
+                    <p class="presentation-meta">OL2A 2023</p>
+                    <p class="presentation-location">Ponta Delgada, Portugal • September 2023</p>
+                    <p class="presentation-links">
+                        <a href="https://drive.google.com/file/d/1KTr2pS3kz8wZSa4Ks4TaaTcly_DvYu67/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Slides</a>
+                    </p>
                 </div>
 
-                <div class="presentation-card">
-                    <div class="presentation-header">
-                        <div class="presentation-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <div class="presentation-type">Conference Talk</div>
-                    </div>
+                <div class="presentation-item">
                     <h3>Bilevel Optimization by Conditional Bayesian Optimization</h3>
-                    <p class="presentation-venue">LOD 2023</p>
-                    <p class="presentation-location"><i class="fas fa-map-marker-alt"></i> Grasmere, UK</p>
-                    <p class="presentation-date"><i class="far fa-calendar"></i> September 2023</p>
-                    <div class="presentation-actions">
-                        <a href="https://drive.google.com/file/d/1fhkuVfbbceZO-Y7_4M2-zkmN_p1I_zLa/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="presentation-link">
-                            <i class="fas fa-file-powerpoint"></i> Slides
-                        </a>
-                    </div>
+                    <p class="presentation-meta">LOD 2023</p>
+                    <p class="presentation-location">Grasmere, UK • September 2023</p>
+                    <p class="presentation-links">
+                        <a href="https://drive.google.com/file/d/1fhkuVfbbceZO-Y7_4M2-zkmN_p1I_zLa/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Slides</a>
+                    </p>
                 </div>
 
-                <div class="presentation-card">
-                    <div class="presentation-header">
-                        <div class="presentation-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="presentation-type">Workshop</div>
-                    </div>
+                <div class="presentation-item">
                     <h3>Multi-objective Bilevel Decision Making with Noisy Objectives</h3>
-                    <p class="presentation-venue">ECAI'23, MODeM Workshop</p>
-                    <p class="presentation-location"><i class="fas fa-map-marker-alt"></i> Krakow, Poland</p>
-                    <p class="presentation-date"><i class="far fa-calendar"></i> October 2023</p>
-                    <div class="presentation-actions">
-                        <a href="https://drive.google.com/file/d/18F9RUL1WOP03M93_jm5mrsyMRsasnqzs/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="presentation-link">
-                            <i class="fas fa-file-powerpoint"></i> Slides
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-content">
-                <p>Feel free to reach out if you'd like to collaborate or have any questions.</p>
-                <div class="contact-info">
-                    <a href="mailto:vedatdogann@gmail.com" class="contact-link">
-                        <i class="fas fa-envelope"></i>
-                        vedatdogann@gmail.com
-                    </a>
-                    <p class="contact-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Cork, Ireland
+                    <p class="presentation-meta">ECAI'23, MODeM Workshop</p>
+                    <p class="presentation-location">Krakow, Poland • October 2023</p>
+                    <p class="presentation-links">
+                        <a href="https://drive.google.com/file/d/18F9RUL1WOP03M93_jm5mrsyMRsasnqzs/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Slides</a>
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- CV Section -->
+    <section id="cv" class="section">
+        <div class="container">
+            <h2 class="section-heading">CV</h2>
+            <div class="content">
+                <div class="cv-section">
+                    <h3>Education</h3>
+                    <div class="cv-item">
+                        <p class="cv-title"><strong>Doctor of Philosophy - Computer Science</strong></p>
+                        <p class="cv-meta">University College Cork, Cork, Ireland • Oct 2019 - Oct 2023</p>
+                        <p>Thesis: Bayesian Bilevel Optimization</p>
+                    </div>
+                    <div class="cv-item">
+                        <p class="cv-title"><strong>Higher Certificate of Engineering - Electronics and Computer Engineering</strong></p>
+                        <p class="cv-meta">Athlone Institute of Technology, Athlone, Ireland • Sep 2015 - Jun 2016</p>
+                        <p>GPA: 82.66/100</p>
+                    </div>
+                    <div class="cv-item">
+                        <p class="cv-title"><strong>Bachelor of Engineering - Mathematical Engineering</strong></p>
+                        <p class="cv-meta">Yildiz Technical University, Istanbul, Turkey • Sep 2013 - Aug 2018</p>
+                        <p>GPA: 3.04/4.00 • Graduated with Honour (Top 10 of class)</p>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Experience</h3>
+                    <div class="cv-item">
+                        <p class="cv-title"><strong>Postdoctoral Researcher</strong></p>
+                        <p class="cv-meta">Insight SFI Research Centre for Data Analytics / University College Cork • March 2024 - Present</p>
+                    </div>
+                    <div class="cv-item">
+                        <p class="cv-title"><strong>Research Assistant</strong></p>
+                        <p class="cv-meta">Insight SFI Research Centre for Data Analytics / University College Cork • Oct 2023 - March 2024</p>
+                    </div>
+                    <div class="cv-item">
+                        <p class="cv-title"><strong>Software Engineer</strong></p>
+                        <p class="cv-meta">Garanti Technology / BBVA Group, Istanbul, Turkey • July 2018 - Oct 2019</p>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Skills</h3>
+                    <p><strong>Programming:</strong> Python, Java, SQL</p>
+                    <p><strong>Frameworks:</strong> PyTorch, Scikit-learn, BoTorch, GPy, GPyOpt, NetworkX, DGL</p>
+                    <p><strong>Research:</strong> Bayesian Optimization, Bilevel Optimization, Multi-Objective Optimization, Game Theory, Graph Neural Networks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2 class="section-heading">Contact</h2>
+            <div class="content">
+                <p>Feel free to reach out if you'd like to collaborate or have any questions.</p>
+                <p><a href="mailto:vedatdogann@gmail.com">vedatdogann@gmail.com</a></p>
+                <p>Cork, Ireland</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
