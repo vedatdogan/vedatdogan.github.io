@@ -780,20 +780,32 @@ body {
     margin-top: 0.75rem;
 }
 
-/* Collaboration Interests */
-.collaboration-interests {
+/* Collaboration Opportunities in Contact */
+.collaboration-opportunities {
     margin-top: 2rem;
-    padding: 1.5rem;
+}
+
+.collaboration-interests {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
     background: var(--bg-accent);
     border-radius: 6px;
     border-left: 3px solid var(--accent-color);
 }
 
-.collaboration-interests h3 {
+.collaboration-interests h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+    color: var(--text-color);
+}
+
+.collaboration-opportunities h3 {
     font-family: 'Crimson Text', serif;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--text-color);
 }
 
