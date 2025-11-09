@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -19,7 +20,11 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#presentations">Presentations</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -33,31 +38,59 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title" style="font-family: 'Playfair Display', serif;">Vedat Dogan</h1>
-                <p class="hero-subtitle">Postdoctoral Researcher in AI, Machine Learning & Optimization</p>
-                <p class="hero-location">Insight SFI Research Centre for Data Analytics, University College Cork, Cork, Ireland</p>
-                <div class="hero-social">
-                    <a href="https://github.com/vedatdogan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/vedatdogan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=58SPkuwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
-                        </svg>
-                    </a>
-                    <a href="https://twitter.com/vedat__dogan" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                        </svg>
-                    </a>
+            <div class="hero-wrapper">
+                <div class="hero-image">
+                    <div class="hero-image-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title" style="font-family: 'Playfair Display', serif;">Vedat Dogan</h1>
+                    <p class="hero-subtitle">Postdoctoral Researcher in AI, Machine Learning & Optimization</p>
+                    <p class="hero-location">Insight SFI Research Centre for Data Analytics, University College Cork, Cork, Ireland</p>
+                    <div class="hero-actions">
+                        <a href="Resume-CV-VD copy.pdf" download class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <div class="hero-social">
+                            <a href="https://github.com/vedatdogan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vedatdogan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=58SPkuwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                                <i class="fas fa-graduation-cap"></i>
+                            </a>
+                            <a href="https://twitter.com/vedat__dogan" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-target="6">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Publications</div>
+                </div>
+                <div class="stat-item" data-target="5">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Conference Talks</div>
+                </div>
+                <div class="stat-item" data-target="10">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item" data-target="3">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Research Areas</div>
                 </div>
             </div>
         </div>
@@ -171,51 +204,411 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Python</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Java</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>SQL</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-brain"></i> Machine Learning Frameworks</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>PyTorch</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Scikit-learn</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>BoTorch / GPy</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Graph Neural Networks</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3><i class="fas fa-chart-line"></i> Research Domains</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Bayesian Optimization</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Bilevel Optimization</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Multi-Objective Optimization</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Game Theory</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Publications Section -->
-    <section id="publications" class="section section-alt">
+    <section id="publications" class="section">
         <div class="container">
             <h2 class="section-title">Publications</h2>
             <div class="publications-list">
-                <div class="publication-item">
+                <div class="publication-item featured">
+                    <div class="publication-badge">Featured</div>
                     <h3>Multi-Objective BiLevel Optimization by Bayesian Optimization</h3>
-                    <p class="publication-venue">Algorithms 2024, 17, 146</p>
-                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
-                    <a href="https://www.mdpi.com/1999-4893/17/4/146" target="_blank" rel="noopener noreferrer" class="publication-link">View Paper →</a>
+                    <p class="publication-venue"><i class="fas fa-book"></i> Algorithms 2024, 17, 146</p>
+                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
+                    <div class="publication-actions">
+                        <a href="https://www.mdpi.com/1999-4893/17/4/146" target="_blank" rel="noopener noreferrer" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> View Paper
+                        </a>
+                        <a href="https://www.mdpi.com/1999-4893/17/4/146" target="_blank" rel="noopener noreferrer" class="publication-link">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                    </div>
                 </div>
 
                 <div class="publication-item">
                     <h3>BHO-MA: Bayesian Hyperparameter Optimization with Multi-objective Acquisition</h3>
-                    <p class="publication-venue">International Conference on Optimization, Learning Algorithms and Applications (OL2A 2023)</p>
-                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-53025-8_27" target="_blank" rel="noopener noreferrer" class="publication-link">View Paper →</a>
+                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> OL2A 2023</p>
+                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
+                    <div class="publication-actions">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-53025-8_27" target="_blank" rel="noopener noreferrer" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> View Paper
+                        </a>
+                    </div>
                 </div>
 
                 <div class="publication-item">
                     <h3>Bilevel Optimization by Conditional Bayesian Optimization</h3>
-                    <p class="publication-venue">International Conference on Machine Learning, Optimization, and Data Science (LOD2023)</p>
-                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-53969-5_19" target="_blank" rel="noopener noreferrer" class="publication-link">View Paper →</a>
+                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> LOD2023</p>
+                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
+                    <div class="publication-actions">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-53969-5_19" target="_blank" rel="noopener noreferrer" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> View Paper
+                        </a>
+                    </div>
                 </div>
 
                 <div class="publication-item">
                     <h3>A Batch Bayesian Approach for Bilevel Multi-Objective Decision Making Under Uncertainty</h3>
-                    <p class="publication-venue">AAAI'23 Workshop on Uncertainty Reasoning and Quantification in Decision Making</p>
-                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
-                    <a href="https://charliezhaoyinpeng.github.io/UDM-AAAI23/assets/papers/15/CameraReady/Dogan%20-%20A%20Batch%20Bayesian%20Approach%20for%20Bilevel%20Multi-objective%20Decision%20Making%20Under%20Uncertainty.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">View Paper →</a>
+                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> AAAI'23 Workshop</p>
+                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
+                    <div class="publication-actions">
+                        <a href="https://charliezhaoyinpeng.github.io/UDM-AAAI23/assets/papers/15/CameraReady/Dogan%20-%20A%20Batch%20Bayesian%20Approach%20for%20Bilevel%20Multi-objective%20Decision%20Making%20Under%20Uncertainty.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> View Paper
+                        </a>
+                    </div>
                 </div>
 
                 <div class="publication-item">
                     <h3>Multi-objective Bilevel Decision Making with Noisy Objectives: A Batch Bayesian Approach</h3>
-                    <p class="publication-venue">ECAI'23, Multi-objective Decision Making (MODeM'23) Workshop</p>
-                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
-                    <a href="https://modem2023.vub.ac.be/papers/MODeM2023_paper_2.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">View Paper →</a>
+                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> ECAI'23, MODeM Workshop</p>
+                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
+                    <div class="publication-actions">
+                        <a href="https://modem2023.vub.ac.be/papers/MODeM2023_paper_2.pdf" target="_blank" rel="noopener noreferrer" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> View Paper
+                        </a>
+                    </div>
                 </div>
 
                 <div class="publication-item">
                     <h3>Bayesian Optimization with Multi-objective Acquisition Function for Bilevel Problems</h3>
-                    <p class="publication-venue">Artificial Intelligence and Cognitive Science (AICS 2022)</p>
-                    <p class="publication-authors">Vedat Dogan, Steven Prestwich</p>
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-26438-2_32" target="_blank" rel="noopener noreferrer" class="publication-link">View Paper →</a>
+                    <p class="publication-venue"><i class="fas fa-chalkboard-teacher"></i> AICS 2022</p>
+                    <p class="publication-authors"><i class="fas fa-users"></i> Vedat Dogan, Steven Prestwich</p>
+                    <div class="publication-actions">
+                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-26438-2_32" target="_blank" rel="noopener noreferrer" class="publication-link">
+                            <i class="fas fa-external-link-alt"></i> View Paper
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Research Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Bayesian Bilevel Optimization</h3>
+                    <p>Developing efficient algorithms for hierarchical optimization problems using Bayesian methods and Gaussian processes.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">6</span>
+                            <span class="metric-label">Publications</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">High</span>
+                            <span class="metric-label">Impact</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Bayesian Optimization</span>
+                        <span class="tag">Bilevel</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Graph Neural Networks for Network Analysis</h3>
+                    <p>Applying GNN algorithms to network representation data for optimization and decision-making tasks.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">Ongoing</span>
+                            <span class="metric-label">Status</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">GNN</span>
+                            <span class="metric-label">Focus</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">GNN</span>
+                        <span class="tag">Network Analysis</span>
+                        <span class="tag">PyTorch</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3>Game-Theoretic Decision Making</h3>
+                    <p>AI-supported decision-making systems for diplomacy, military applications, and strategic optimization.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">Active</span>
+                            <span class="metric-label">Research</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">Multi-Level</span>
+                            <span class="metric-label">Optimization</span>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Game Theory</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Decision Making</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <h2 class="section-title">Latest Blog Posts</h2>
+            <p class="section-subtitle">Read my articles on Medium</p>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar"></i> Coming Soon</div>
+                        <h3>Understanding Bayesian Optimization</h3>
+                        <p>An in-depth exploration of Bayesian optimization techniques and their applications in machine learning.</p>
+                        <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="blog-link">
+                            Read on Medium <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar"></i> Coming Soon</div>
+                        <h3>Bilevel Optimization in Practice</h3>
+                        <p>Practical insights into solving bilevel optimization problems with real-world examples.</p>
+                        <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="blog-link">
+                            Read on Medium <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date"><i class="far fa-calendar"></i> Coming Soon</div>
+                        <h3>Graph Neural Networks for Optimization</h3>
+                        <p>Exploring how GNNs can be applied to complex optimization challenges in network data.</p>
+                        <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="blog-link">
+                            Read on Medium <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-cta">
+                <a href="https://medium.com/@vedatdogan" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <i class="fab fa-medium"></i> View All Posts on Medium
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Presentations Section -->
+    <section id="presentations" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Lectures & Presentations</h2>
+            <div class="presentations-grid">
+                <div class="presentation-card">
+                    <div class="presentation-header">
+                        <div class="presentation-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div class="presentation-type">Conference Talk</div>
+                    </div>
+                    <h3>A Batch Bayesian Approach for Bilevel Multi-Objective Decision Making</h3>
+                    <p class="presentation-venue">AAAI'23 Workshop on Uncertainty Reasoning</p>
+                    <p class="presentation-location"><i class="fas fa-map-marker-alt"></i> Washington, USA</p>
+                    <p class="presentation-date"><i class="far fa-calendar"></i> February 2023</p>
+                    <div class="presentation-actions">
+                        <a href="https://drive.google.com/file/d/18s2JfBl1DTDg5Ba0VPVIUcNntNJ0-Qnc/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="presentation-link">
+                            <i class="fas fa-file-powerpoint"></i> Slides
+                        </a>
+                    </div>
+                </div>
+
+                <div class="presentation-card">
+                    <div class="presentation-header">
+                        <div class="presentation-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="presentation-type">Conference Talk</div>
+                    </div>
+                    <h3>BHO-MA: Bayesian Hyperparameter Optimization</h3>
+                    <p class="presentation-venue">OL2A 2023</p>
+                    <p class="presentation-location"><i class="fas fa-map-marker-alt"></i> Ponta Delgada, Portugal</p>
+                    <p class="presentation-date"><i class="far fa-calendar"></i> September 2023</p>
+                    <div class="presentation-actions">
+                        <a href="https://drive.google.com/file/d/1KTr2pS3kz8wZSa4Ks4TaaTcly_DvYu67/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="presentation-link">
+                            <i class="fas fa-file-powerpoint"></i> Slides
+                        </a>
+                    </div>
+                </div>
+
+                <div class="presentation-card">
+                    <div class="presentation-header">
+                        <div class="presentation-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="presentation-type">Conference Talk</div>
+                    </div>
+                    <h3>Bilevel Optimization by Conditional Bayesian Optimization</h3>
+                    <p class="presentation-venue">LOD 2023</p>
+                    <p class="presentation-location"><i class="fas fa-map-marker-alt"></i> Grasmere, UK</p>
+                    <p class="presentation-date"><i class="far fa-calendar"></i> September 2023</p>
+                    <div class="presentation-actions">
+                        <a href="https://drive.google.com/file/d/1fhkuVfbbceZO-Y7_4M2-zkmN_p1I_zLa/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="presentation-link">
+                            <i class="fas fa-file-powerpoint"></i> Slides
+                        </a>
+                    </div>
+                </div>
+
+                <div class="presentation-card">
+                    <div class="presentation-header">
+                        <div class="presentation-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="presentation-type">Workshop</div>
+                    </div>
+                    <h3>Multi-objective Bilevel Decision Making with Noisy Objectives</h3>
+                    <p class="presentation-venue">ECAI'23, MODeM Workshop</p>
+                    <p class="presentation-location"><i class="fas fa-map-marker-alt"></i> Krakow, Poland</p>
+                    <p class="presentation-date"><i class="far fa-calendar"></i> October 2023</p>
+                    <div class="presentation-actions">
+                        <a href="https://drive.google.com/file/d/18F9RUL1WOP03M93_jm5mrsyMRsasnqzs/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="presentation-link">
+                            <i class="fas fa-file-powerpoint"></i> Slides
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -229,23 +622,22 @@
                 <p>Feel free to reach out if you'd like to collaborate or have any questions.</p>
                 <div class="contact-info">
                     <a href="mailto:vedatdogann@gmail.com" class="contact-link">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
+                        <i class="fas fa-envelope"></i>
                         vedatdogann@gmail.com
                     </a>
                     <p class="contact-location">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                            <circle cx="12" cy="10" r="3"/>
-                        </svg>
+                        <i class="fas fa-map-marker-alt"></i>
                         Cork, Ireland
                     </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
@@ -257,4 +649,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
