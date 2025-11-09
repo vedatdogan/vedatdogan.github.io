@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links (only for hash links, not external pages)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,18 +8,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Get the section heading within the target section
             const sectionHeading = target.querySelector('.section-heading');
             
-            // Calculate the scroll position to put the heading at the top
+            // Calculate the scroll position to put the heading at the top with some padding
             let scrollPosition;
             if (sectionHeading) {
                 // Get the absolute position of the heading relative to the document
                 const headingRect = sectionHeading.getBoundingClientRect();
                 const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                scrollPosition = headingRect.top + currentScroll;
+                // Add padding to prevent heading from being cut off at the top
+                scrollPosition = headingRect.top + currentScroll - 30;
             } else {
-                // If no heading, scroll to the section top
+                // If no heading, scroll to the section top with padding
                 const sectionRect = target.getBoundingClientRect();
                 const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-                scrollPosition = sectionRect.top + currentScroll;
+                scrollPosition = sectionRect.top + currentScroll - 30;
             }
             
             window.scrollTo({
@@ -40,10 +41,12 @@ if (navToggle) {
     });
 }
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
+// Close mobile menu when clicking on a link (only for hash links, not external pages)
+document.querySelectorAll('.nav-menu a[href^="#"]').forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
+        if (navMenu) {
+            navMenu.classList.remove('active');
+        }
     });
 });
 
