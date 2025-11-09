@@ -108,3 +108,75 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Scroll animations for sections
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+});
+
+sections.forEach(section => {
+    sectionObserver.observe(section);
+});
+
+// Animated statistics counter
+function animateCounter(element, target, duration = 2000) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    
+    const updateCounter = () => {
+        start += increment;
+        if (start < target) {
+            element.textContent = Math.floor(start);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+    
+    updateCounter();
+}
+
+const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+            entry.target.classList.add('counted', 'visible');
+            const statItem = entry.target;
+            const target = parseInt(statItem.getAttribute('data-target'));
+            const numberElement = statItem.querySelector('.stat-number');
+            animateCounter(numberElement, target);
+        }
+    });
+}, {
+    threshold: 0.5
+});
+
+document.querySelectorAll('.stat-item').forEach(stat => {
+    statObserver.observe(stat);
+});
+
+// Back to top button
+const backToTopButton = document.getElementById('backToTop');
+
+if (backToTopButton) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
