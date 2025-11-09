@@ -420,7 +420,7 @@ body {
     border-left: 2px solid var(--accent-color);
     background: var(--bg-accent);
     border-radius: 4px;
-    min-width: 70px;
+    min-width: 75px;
     opacity: 0;
     transform: translateY(10px);
     transition: var(--transition);
