@@ -845,6 +845,18 @@ h4 b {
     font-family: 'Crimson Text', serif;
 }
 
+.teaching-content h3 a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition);
+    border-bottom: 1px solid transparent;
+}
+
+.teaching-content h3 a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
 .teaching-meta {
     display: flex;
     flex-wrap: wrap;
