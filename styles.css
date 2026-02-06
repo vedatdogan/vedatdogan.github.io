@@ -229,6 +229,35 @@ h4 b {
     justify-content: center;
 }
 
+.hero-profile-wrap {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.hero-profile-wrap:hover {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.hero-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-profile-img:hover {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
 .image-placeholder {
     width: 150px;
     height: 150px;
